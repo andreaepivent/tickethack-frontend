@@ -1,6 +1,6 @@
 // Fonction pour afficher la liste des trajets
 function displayTravelsInCart() {
-  fetch("http://localhost:3000/cart/allCart")
+  fetch("https://tickethack-backend-tau-dusky.vercel.app/cart/allCart")
     .then((response) => response.json())
     .then((travelCart) => {
 
@@ -52,7 +52,7 @@ function displayTravelsInCart() {
         for (let button of deleteButtons) {
           button.addEventListener("click", () => {
             let id = button.getAttribute("id");
-            fetch(`http://localhost:3000/cart/deleteTrip/${id}`, {
+            fetch(`https://tickethack-backend-tau-dusky.vercel.app/cart/deleteTrip/${id}`, {
               method: "DELETE",
             })
               .then((response) => response.json())
@@ -68,7 +68,7 @@ function displayTravelsInCart() {
         document.querySelector("#btn-purchase").addEventListener("click", () => {
           console.log("clic");
           // On transfère à bookings
-          fetch("http://localhost:3000/bookings/purchase", {
+          fetch("https://tickethack-backend-tau-dusky.vercel.app/bookings/purchase", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
           })
@@ -78,7 +78,7 @@ function displayTravelsInCart() {
             });
 
           // On supprime le panier
-          fetch("http://localhost:3000/cart/emptyCart", {
+          fetch("https://tickethack-backend-tau-dusky.vercel.app/cart/emptyCart", {
             method: "DELETE",
           })
             .then((response) => response.json())

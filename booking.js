@@ -1,4 +1,4 @@
-fetch("http://localhost:3000/bookings/allBookings")
+fetch("https://tickethack-backend-tau-dusky.vercel.app/bookings/allBookings")
   .then((response) => response.json())
   .then((travelBooking) => {
     // S'il y a des trajets dans booking
