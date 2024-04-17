@@ -1,40 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Tickethack</title>
-    <link href="styles.css" rel="stylesheet" />
-</head>
+    <link href="cart.css" rel="stylesheet" />
+  </head>
 
-<body>
+  <body>
     <div id="container">
-        <div id="header">
-            <div id="logo-container">
-                <div id="logo-container-right">
-                    <h1 id="btn-home">Tickethack</h1>
-
-                </div>
-                <div id="logo-container-left">
-                  <h3 id="btn-cart">Cart</h3>
-                    <h3 id="btn-bookings">Bookings</h3>
-                </div>
-            </div>
+      <div id="header">
+        <div id="logo-container">
+          <div id="logo-container-right">
+            <h1 id="btn-home"><a href="index.html">Tickethack</a></h1>
+          </div>
+          <div id="logo-container-left">
+            <h3 id="btn-cart"><a href="cart.html">Cart</a></h3>
+            <h3 id="btn-bookings"><a href="booking.html">Bookings</a></h3>
+          </div>
         </div>
-    <div id="myBookings">
+      </div>
+      <div id="content">
+        <div id="myBookings">
+          <p>No tickets in your cart.</p>
+          <p>Why not plan a trip?</p>
+
+          <!-- 
         <p4 id="myBookingsLineOne">My cart</p4>
-        <p4 id="myBookingsLineTwo">feknfi</p4>
-        <div id="purchaseTotal">
-        <p5 id="myTotal">Total</p5>
-        <button type="button" id="btn-purchase">Purchase</button>
-        </div>
-    </div>    
-    
 
+        <div class="trip">
+            <p class="foundTrip">Paris > Zurich</p>
+            <p class="departureTime">17:30</p>
+            <p class="ticketPrice">50€</p>
+            <button type="button" id="btn-delete">X</button>
+        </div>
+
+        <div id="purchaseTotal">
+          <p5 id="myTotal">Total</p5>
+          <button type="button" id="btn-purchase">Purchase</button>
+        </div>
+        --></div>
+      </div>
     </div>
 
-
-</body>
-
+    <script src="cart.js"></script>
+  </body>
 </html>

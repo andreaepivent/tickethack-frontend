@@ -3,12 +3,17 @@ function displayTravelsInCart() {
   fetch("http://localhost:3000/cart/allCart")
     .then((response) => response.json())
     .then((travelCart) => {
-      // Initialisation de la div
-      const testDiv = document.querySelector("#test");
-      testDiv.textContent = "";
 
       // S'il y a des trajets dans le panier
       if (travelCart.result) {
+
+        // Initialisation de la div
+      document.querySelector("#myBookings").textContent = "";
+
+        // Ajout du header
+        document.querySelector("#myBookings").innerHTML += 
+         `<p4 id="myBookingsLineOne">My cart</p4>`;
+
         for (let travel of travelCart.travels) {
           console.log(travel);
 
@@ -18,23 +23,32 @@ function displayTravelsInCart() {
           const minutes = date.getMinutes().toString().padStart(2, "0");
 
           // Ajout des voyages dans des divs individuelles
-          testDiv.innerHTML += `<div><p>${travel.travelInfos.departure} > ${travel.travelInfos.arrival}</p>
-                <p>${heure}:${minutes}</p>
-                <p class="prix">${travel.travelInfos.price}€</p>
-                <p class="delete-travel" id="${travel.travelInfos._id}" >bouton</p></div>`;
+          document.querySelector("#myBookings").innerHTML += `
+          
+          <div class="trip">
+            <p class="foundTrip">${travel.travelInfos.departure} > ${travel.travelInfos.arrival}</p>
+            <p class="departureTime">${heure}:${minutes}</p>
+            <p class="ticketPrice">${travel.travelInfos.price}€</p>
+            <button type="button" class="btn-delete" id="${travel.travelInfos._id}">X</button>
+          </div>
+                `;
         }
 
         // Calcul du total et ajout à la div
-        let prix = document.querySelectorAll(".prix");
+        let prix = document.querySelectorAll(".ticketPrice");
         let total = 0;
         for (let p of prix) {
           let prixTravel = Number(p.textContent.replace("€", ""));
           total += prixTravel;
         }
-        testDiv.innerHTML += `<div><p>Total: ${total}€</p> <p id="purchase">Purchase</p></div>`;
+        document.querySelector("#myBookings").innerHTML += 
+        `<div id="purchaseTotal">
+        <p5 id="myTotal">Total: ${total}€</p5>
+        <button type="button" id="btn-purchase">Purchase</button>
+      </div>`;
 
         // On ajoute un écouteur sur chaque bouton delete
-        deleteButtons = document.querySelectorAll(".delete-travel");
+        deleteButtons = document.querySelectorAll(".btn-delete");
         for (let button of deleteButtons) {
           button.addEventListener("click", () => {
             let id = button.getAttribute("id");
@@ -51,7 +65,7 @@ function displayTravelsInCart() {
         }
 
         // On ajoute un écouteur sur le bouton purchase
-        document.querySelector("#purchase").addEventListener("click", () => {
+        document.querySelector("#btn-purchase").addEventListener("click", () => {
           console.log("clic");
           // On transfère à bookings
           fetch("http://localhost:3000/bookings/purchase", {
@@ -80,8 +94,8 @@ function displayTravelsInCart() {
       // Sinon
       else {
         // Initialisation de la div
-        document.querySelector("#test").innerHTML = `<p>No booking yet.</p>
-            <p>Why not plan a trip?</p>`;
+        document.querySelector("#myBookings").innerHTML = `<p>No tickets in your cart.</p>
+        <p>Why not plan a trip?</p>`;
       }
     });
 }
