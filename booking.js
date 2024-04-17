@@ -1,4 +1,4 @@
-fetch("https://tickethack-backend-tau-dusky.vercel.app/bookings/allBookings")
+fetch("https://tickethack-backend-juvo.vercel.app/bookings/allBookings")
   .then((response) => response.json())
   .then((travelBooking) => {
     // S'il y a des trajets dans booking

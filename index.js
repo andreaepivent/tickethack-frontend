@@ -7,7 +7,7 @@ document.querySelector("#btn-add").addEventListener("click", function () {
     
     
     
-      fetch(`https://tickethack-backend-tau-dusky.vercel.app/travels/${departure}/${arrival}/${timestamp}/`)
+      fetch(`https://tickethack-backend-juvo.vercel.app/travels/${departure}/${arrival}/${timestamp}/`)
       .then(response => response.json())
       .then(data => {
         document.querySelector('#content-right').textContent = "";
@@ -30,7 +30,7 @@ document.querySelector("#btn-add").addEventListener("click", function () {
           for (let button of bookBtn) {
             button.addEventListener('click', function () {
               const id = button.getAttribute("id"); 
-              fetch('https://tickethack-backend-tau-dusky.vercel.app/cart/addToCart', {
+              fetch('https://tickethack-backend-juvo.vercel.app/cart/addToCart', {
                 method: "POST",
                 headers: { 'Content-Type': 'application/json'},
                 body: JSON.stringify({travelInfos: id})
