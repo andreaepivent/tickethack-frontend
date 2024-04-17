@@ -1,0 +1,170 @@
+/* HEADER */
+
+/* BODY */
+body {
+    /*à verifier le lien pour image et changer*/
+    background-color: #EFF2F1;
+    background-repeat: no-repeat; 
+    background-size: cover; 
+    font-family: sans-serif;
+    padding: 20px;
+  }
+  #container {
+    height: 100vh;
+    width: 100vw;
+    display: grid;
+    grid-template-rows: repeat(12, 1fr);
+    grid-template-columns: repeat(12, 1fr);
+  }
+  #header {
+    grid-row-start: 1;
+    grid-row-end: 2;
+    grid-column-start: 1;
+    grid-column-end: 13;
+    background-color: white;
+  }
+  #logo-container {
+      /* à verifier si il faut ajouter d'utres lines*/
+      display:flex;
+  flex-direction: row;
+   justify-content: space-between;
+   width:100%;
+  }
+    #logo-container-left {
+  display: flex;
+   flex-direction: row;
+   justify-content: flex-end;
+   justify-content: space-around;
+    aside: left;
+    float: left;
+    width: 30%;
+     }
+     #btn-home {
+       margin-top:25px;
+  margin-left:25px;
+  margin-right:25px;
+  margin-bottom:25px;
+      color: #4FAA82;
+      font-family: roboto;
+  }
+  #logo-container-right {
+      display: flex;
+   flex-direction: row;
+    aside: right;
+    float: right;
+    width: 60%;
+     }
+      #btn-cart {
+       margin-top:25px;
+  margin-left:25px;
+  margin-right:25px;
+  margin-bottom:25px;
+      color: black;
+      font-family: roboto;
+      font-size:25;
+  }
+      #btn-bookings {
+       margin-top:25px;
+  margin-left:25px;
+  margin-right:25px;
+  margin-bottom:25px;
+      color: black;
+      font-family: roboto;
+      font-size:25;
+  }
+  
+     #myBookings{
+        grid-row-start: 4;
+    grid-row-end: 9;
+    grid-column-start: 2;
+    grid-column-end: 12;
+    background-color:white;
+    border-radius: 5px;
+    width:100%;
+       display: flex;
+       flex-direction: column;
+   justify-content: center;
+   align-items: center;  
+   box-shadow: 5px 5px 15px -2px rgba(0,0,0,0.18);
+     }
+
+     /* #myBookingsLineOne{
+       display: flex;
+   justify-content: center;
+   align-items: center;
+   margin-top:25px;
+   margin-bottom:25px;
+     } */
+
+        /* #myBookingsLineTwo{
+       display: flex;
+   justify-content: center;
+   align-items: center;
+   margin-top:25px;
+   margin-bottom:25px;
+     } */
+
+     /* #purchaseTotal{
+       grid-row-start: 8;
+    grid-row-end: 9;
+    grid-column-start: 1;
+    grid-column-end: 13;
+       margin-top:25px;
+       width:100%;
+           
+      height: 500px;
+      background-color: darkslateblue;
+      color:white;
+      border-radius: 8px;
+       display: flex;
+  justify-content: space-between;
+  align-items: center;
+    } */
+
+      /* #myTotal{
+   margin-top:25px;
+   margin-bottom:25px;
+   margin-left:25px;
+     } */
+  
+   /* #btn-purchase {
+      width:200px; 
+      height: 50px;
+      margin-top:25px;
+      margin-left:25px;
+  margin-right:25px;
+  margin-bottom:25px;
+      padding: 17px;
+      border: 1px green solid;
+      border-radius: 8px;
+      color: #ffffff;
+      background-color: #4FAA82;
+      font-size: 16px;
+      display: flex;
+      align-items: center;
+      flex-direction: row;
+   } */
+  
+  #test {
+    display: flex;
+    background-color: #EFF2F1;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-radius: 5px;
+    width: 90%;
+  }  
+  .underlineBar {
+    width: 20%;
+    background-color: black;
+    height: 2px;
+    margin-top: 40px;
+  }
+
+  .congratMessage {
+    color: lightblue;
+  }
+  a {
+    text-decoration: none;
+  }
+

@@ -19,10 +19,14 @@ fetch("http://localhost:3000/bookings/allBookings")
         const difference = Math.floor((date - dateNow) / (1000 * 60 * 60)); // différence en heures
 
         // Ajout des voyages dans des divs individuelles
-        testDiv.innerHTML += `<div><p>${travel.travelInfos.departure} > ${travel.travelInfos.arrival}</p>
+        testDiv.innerHTML += `<div>
+        <p>${travel.travelInfos.departure} > ${travel.travelInfos.arrival}</p>
                     <p>${heure}:${minutes}</p>
                     <p>${travel.travelInfos.price}€</p>
-                    <p>Departure in ${difference} hours</p></div>`;
+                    <p>Departure in ${difference} hours</p>
+        </div>`;
+
+                    
       }
 
       testDiv.innerHTML += `<div><p>Enjoy your travels with Tickethack!</p></div>`;
