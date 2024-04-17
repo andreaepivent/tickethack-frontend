@@ -1,0 +1,235 @@
+/* HEADER */
+
+/* BODY */
+body {
+  /*à verifier le lien pour image et changer*/
+  background-image: url("https://miro.medium.com/v2/resize:fit:720/format:webp/0*xCidi9FOeg39tPyf");
+  background-repeat: no-repeat; 
+  background-size: cover; 
+  font-family: sans-serif;
+  padding: 20px;
+}
+#container {
+  height: 100vh;
+  width: 100vw;
+  display: grid;
+  grid-template-rows: repeat(12, 1fr);
+  grid-template-columns: repeat(12, 1fr);
+}
+#header {
+  grid-row-start: 1;
+  grid-row-end: 2;
+  grid-column-start: 1;
+  grid-column-end: 13;
+  background-color: white;
+}
+#logo-container {
+    /* à verifier si il faut ajouter d'utres lines*/
+    display:flex;
+flex-direction: row;
+       align-items: center;
+ justify-content: space-between;
+ width:100%;
+}
+  #logo-container-left {
+display: flex;
+ flex-direction: row;
+ justify-content: flex-end;
+ justify-content: space-around;
+  aside: left;
+  float: left;
+  width: 30%;
+   }
+   #btn-home {
+     margin-top:25px;
+margin-left:25px;
+margin-right:25px;
+margin-bottom:25px;
+    color: #4FAA82;
+    font-family: roboto;
+}
+#logo-container-right {
+    display: flex;
+ flex-direction: row;
+       align-items: center;
+  aside: right;
+  float: right;
+  width: 60%;
+   }
+    #btn-cart {
+     margin-top:25px;
+margin-left:25px;
+margin-right:25px;
+margin-bottom:25px;
+    color: black;
+     font-size: 20px;
+    font-family: 'Courier New', Courier, monospace;
+}
+    #btn-bookings {
+     margin-top:25px;
+margin-left:25px;
+margin-right:25px;
+margin-bottom:25px;
+    color: black;
+    font-size: 20px;
+    font-family: 'Courier New', Courier, monospace;
+}
+   
+#greating{
+  grid-row-start: 2;
+  grid-row-end: 3;
+  grid-column-start: 1;
+  grid-column-end: 13;
+}
+#explore{
+  color:white;
+  display:flex;
+  text-align:center;
+  display: flex;
+flex-direction: column;
+}
+#compare{
+  color:white;
+  display:flex;
+  text-align:center;
+  display: flex;
+flex-direction: column;
+}
+#content-left {
+  grid-row-start: 4;
+  grid-row-end: 10;
+  grid-column-start: 3;
+  grid-column-end: 6;
+  border-radius: 8px;
+  background-color: #F1F5F9;
+  display: flex;
+  flex-direction: column;
+   align-items: center;
+}
+#add-departure{
+margin-top:25px;
+margin-left:25px;
+margin-right:25px;
+margin-bottom:0px;
+}
+#add-arrival{
+margin-top:0px;
+margin-left:25px;
+margin-right:25px;
+margin-bottom:0px;
+}
+#add-nothing {
+    visibility:hidden;
+    height: 0;
+     width: 0;
+     overflow: hidden;
+}
+#today{
+margin-top:0px;
+margin-left:25px;
+margin-right:25px;
+margin-bottom:50px;
+}
+#btn-add {
+    width:200px; 
+    height: 50px;
+    margin-left:25px;
+margin-right:25px;
+margin-bottom:25px;
+    padding: 17px;
+    border: 1px green solid;
+    border-radius: 5px;
+    color: #ffffff;
+    background-color: #4FAA82;
+    font-size: 14px;
+    font-family: 'Courier New', Courier, monospace;
+  }
+#content-right {
+  grid-row-start: 4;
+  grid-row-end: 10;
+  grid-column-start: 7;
+  grid-column-end: 10;
+  border-radius: 8px;
+  width:100%;
+  background-color: #F1F5F9;
+  display : flex;
+    flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.train-icon {
+  width: 100px;
+  height: auto;
+display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.line{
+  margin-top: 25px;
+  height: 2px;
+  width:200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background:#4FAA82;
+  /* linear-gradient(90deg, rgb(0, 0, 255), rgb(0,255, 150), rgb(0, 0, 255));*/  
+    }
+    .message{
+      text-align: center;
+      font-size: 14;
+      font-family: 'Courier New', Courier, monospace;
+      display: flex;
+  flex-direction: column;
+  align-items: center;
+    }
+    #trip {
+      display : flex;
+      flex-direction: row;
+       align-items: center;
+       justify-content: space-between;
+ width:100%;
+ background-color: 	gainsboro;
+ border-radius: 8px;
+    }
+    #foundTrip {
+       margin-top:25px; 
+    margin-left:25px;
+margin-right:15px;
+margin-bottom:25px;
+font-size: 12;
+      font-family: 'Courier New', Courier, monospace;
+    }
+    #departureTime{
+       margin-top:25px; 
+    margin-left:15px;
+margin-right:15px;
+margin-bottom:25px;
+font-size: 12;
+      font-family: 'Courier New', Courier, monospace;
+    }
+    #ticketPrice{
+       margin-top:25px; 
+    margin-left:15px;
+margin-right:15px;
+margin-bottom:25px;
+font-size: 12;
+      font-family: 'Courier New', Courier, monospace;
+    }
+    #btn-book{
+      width:100px; 
+    height: 30px;
+    margin-top:25px; 
+    margin-left:15px;
+margin-right:15px;
+margin-bottom:25px;
+display : flex;
+      flex-direction: row;
+       align-items: center;
+    padding: 17px;
+    border: 1px green solid;
+    border-radius: 5px;
+    color: #ffffff;
+    background-color: #4FAA82;
+    font-size: 12px;
+    font-family: 'Courier New', Courier, monospace;
+    }
