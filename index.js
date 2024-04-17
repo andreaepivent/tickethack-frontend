@@ -12,6 +12,7 @@ document.querySelector("#btn-search").addEventListener("click", function () {
       fetch(`http://localhost:3000/travels/${departure}/${arrival}/${timestamp}/`)
       .then(response => response.json())
       .then(data => {
+        document.querySelector('#result').textContent = "";
         if(data.result) {
           for(const travel of data.travels) {
             const date = new Date(travel.date)

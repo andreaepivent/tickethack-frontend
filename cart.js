@@ -3,12 +3,12 @@ function displayTravelsInCart() {
   fetch("http://localhost:3000/cart/allCart")
     .then((response) => response.json())
     .then((travelCart) => {
+      // Initialisation de la div
+      const testDiv = document.querySelector("#test");
+      testDiv.textContent = "";
+
       // S'il y a des trajets dans le panier
       if (travelCart.result) {
-        // Initialisation de la div
-        const testDiv = document.querySelector("#test");
-        testDiv.textContent = "";
-
         for (let travel of travelCart.travels) {
           console.log(travel);
 
@@ -60,6 +60,7 @@ function displayTravelsInCart() {
 
       // On ajoute un écouteur sur le bouton purchase
       document.querySelector("#purchase").addEventListener("click", () => {
+        console.log("clic");
         // On transfère à bookings
         fetch("http://localhost:3000/bookings/purchase", {
           method: "POST",
