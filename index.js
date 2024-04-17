@@ -1,10 +1,8 @@
-
-
-document.querySelector("#btn-search").addEventListener("click", function () {
+document.querySelector("#btn-add").addEventListener("click", function () {
     // input's html values 
-        const departure = document.querySelector('#btn-departure').value;
-        const arrival = document.querySelector('#btn-arrival').value;
-        let timestamp = document.querySelector('#btn-date').value
+        const departure = document.querySelector('#add-departure').value;
+        const arrival = document.querySelector('#add-arrival').value;
+        let timestamp = document.querySelector('#today').value
     timestamp = new Date(timestamp).getTime();
     
     
@@ -12,21 +10,23 @@ document.querySelector("#btn-search").addEventListener("click", function () {
       fetch(`http://localhost:3000/travels/${departure}/${arrival}/${timestamp}/`)
       .then(response => response.json())
       .then(data => {
-        document.querySelector('#result').textContent = "";
+        document.querySelector('#content-right').textContent = "";
         if(data.result) {
           for(const travel of data.travels) {
             const date = new Date(travel.date)
             const heure = date.getHours().toString().padStart(2, '0');
             const minutes = date.getMinutes().toString().padStart(2, '0');
             
-            document.querySelector('#result').innerHTML += `
-              <h1>${travel.departure} > ${travel.arrival}</h1>
-              <h1>${heure}:${minutes}</h1>
-              <h1>price: ${travel.price}</h1>
-              <button class="book-button" id="${travel._id}">Book</button>
+            document.querySelector('#content-right').innerHTML += `
+            <div class="trip">
+            <p class="foundTrip">${travel.departure} > ${travel.arrival}</p>
+            <p class="departureTime">${heure}:${minutes}</p>
+            <p class="ticketPrice">${travel.price}€</p>
+            <button type="button" class="btn-book" id="${travel._id}">Book</button>
+          </div>
             `
           }
-          const bookBtn = document.querySelectorAll(".book-button");
+          const bookBtn = document.querySelectorAll(".btn-book");
           for (let button of bookBtn) {
             button.addEventListener('click', function () {
               const id = button.getAttribute("id"); 
@@ -47,6 +47,16 @@ document.querySelector("#btn-search").addEventListener("click", function () {
           }
         } else {
           console.log("Travel does not exist");
+          document.querySelector('#content-right').innerHTML += 
+          `<img
+          src="images/notfound.png"
+          alt="train icon"
+          class="train-icon"
+        />
+        <hr class="line" />
+        <div id="search-message">
+          <p class="message">No trip found.</p>`
+
         }
         
       })

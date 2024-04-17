@@ -1,58 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Tickethack</title>
-    <link href="styles.css" rel="stylesheet" />
-</head>
+    <link href="index.css" rel="stylesheet" />
+  </head>
 
-<body>
+  <body>
     <div id="container">
-        <div id="header">
-            <div id="logo-container">
-                <div id="logo-container-right">
-                    <h1 id="btn-home">Tickethack</h1>
-                </div>
-                <div id="logo-container-left">
-                  <h3 id="btn-cart">Cart</h3>
-                    <h3 id="btn-bookings">Bookings</h3>
-                </div>
-            </div>
+      <div id="header">
+        <div id="logo-container">
+          <div id="logo-container-right">
+            <h1 id="btn-home">Tickethack</h1>
+          </div>
+          <div id="logo-container-left">
+            <h3 id="btn-cart"><a href="cart.html">Cart</a></h3>
+            <h3 id="btn-bookings"><a href="booking.html">Bookings</a></h3>
+          </div>
         </div>
-        <div id="greating">
-           <h1 id="explore">Explore the world effortlessly by train!</h1>             
-           <h3 id="compare">Compare, book and enjoy cheap prices for train tickets: your journey starts on Tickethack.</h3>
-        </div>
+      </div>
+
+      <div id="greating">
+        <h1 id="explore">Explore the world effortlessly by train!</h1>
+        <h3 id="compare">
+          Compare, book and enjoy cheap prices for train tickets: your journey
+          starts on Tickethack.
+        </h3>
+      </div>
+      <div id="content">
         <div id="content-left">
-            <input id="add-departure" type="text" name="Departure" placeholder="Departure" minlength=3 required
-                style="width:200px; height: 28px">
-            <input id="add-arrival" type="text" name="Arrival" placeholder="Arrival" minlength=3 maxlength=40 required
-                style="width:200px; height: 28px">
-            <p id="add-nothing" style="width:200x; height: 28px"></p>
-            <input type="date" id="today" name="trip-start" value="2018-07-22" min="2024-01-01" max="2026-12-31" style="width:200px; height: 28px"/>
-            <div id="search-container">
-                <button type="button" id="btn-add">Search</button>
-            </div>
+          <input
+            id="add-departure"
+            type="text"
+            placeholder="Departure"
+            minlength="3"
+          />
+
+          <input
+            id="add-arrival"
+            type="text"
+            placeholder="Arrival"
+            minlength="3"
+            maxlength="40"
+          />
+
+          <input
+            type="date"
+            id="today"
+            value="2018-07-22"
+            min="2024-01-01"
+            max="2026-12-31"
+          />
+
+          <button type="button" id="btn-add">Search</button>
         </div>
         <div id="content-right">
-            <!--à changer image address-->
-          <!--<img src="https://sensedetecthealthcare.com/wp-content/uploads/2021/04/picto-yoou-train-300x300.png" alt="train icon" class="train-icon" />
-            <hr class="line">
-            <div id="search-message">
-                <p class="message">It's time to book your future trip.</p>
-            </div>-->
-            <div id="trip">
-              <p id="foundTrip">Paris>Zurich</p>
-              <p id="departureTime">17:30</p>
-              <p id="ticketPrice">50€</p>
-               <button type="button" id="btn-book">Book</button>
-        </div>
+          <!--à changer image address-->
 
+          <img
+            src="images/train.png"
+            alt="train icon"
+            class="train-icon"
+          />
+          <hr class="line" />
+          <div id="search-message">
+            <p class="message">It's time to book your future trip.</p>
+          </div>
+          <!--<div class="trip">
+            <p class="foundTrip">Paris > Zurich</p>
+            <p class="departureTime">17:30</p>
+            <p class="ticketPrice">50€</p>
+            <button type="button" class="btn-book">Book</button>
+          </div>
+
+          <div class="trip">
+            <p class="foundTrip">Paris > Zurich</p>
+            <p class="departureTime">17:30</p>
+            <p class="ticketPrice">50€</p>
+            <button type="button" class="btn-book">Book</button>
+          </div>-->
+        </div>
+      </div>
     </div>
 
-
-</body>
-
+    <script src="index.js"></script>
+  </body>
 </html>

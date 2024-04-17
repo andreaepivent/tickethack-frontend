@@ -1,13 +1,18 @@
 /* HEADER */
 
 /* BODY */
+
+* {
+  box-sizing: border-box;
+}
+
 body {
   /*à verifier le lien pour image et changer*/
   background-image: url("https://miro.medium.com/v2/resize:fit:720/format:webp/0*xCidi9FOeg39tPyf");
-  background-repeat: no-repeat; 
-  background-size: cover; 
-  font-family: sans-serif;
-  padding: 20px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: Calibri;
+  margin: 0px;
 }
 #container {
   height: 100vh;
@@ -22,214 +27,217 @@ body {
   grid-column-start: 1;
   grid-column-end: 13;
   background-color: white;
+  margin: Opx;
+  height: 60px;
+  display:flex;
+  align-items:center;
 }
 #logo-container {
-    /* à verifier si il faut ajouter d'utres lines*/
-    display:flex;
-flex-direction: row;
-       align-items: center;
- justify-content: space-between;
- width:100%;
+  /* à verifier si il faut ajouter d'utres lines*/
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
 }
-  #logo-container-left {
-display: flex;
- flex-direction: row;
- justify-content: flex-end;
- justify-content: space-around;
+#logo-container-left {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
   aside: left;
   float: left;
   width: 30%;
-   }
-   #btn-home {
-     margin-top:25px;
-margin-left:25px;
-margin-right:25px;
-margin-bottom:25px;
-    color: #4FAA82;
-    font-family: roboto;
+}
+
+h3 a {
+  text-decoration:none;
+  color:inherit;
+}
+
+#btn-home {
+  margin-top: 25px;
+  margin-left: 25px;
+  margin-right: 25px;
+  margin-bottom: 25px;
+  color: #4faa82;
 }
 #logo-container-right {
-    display: flex;
- flex-direction: row;
-       align-items: center;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
   aside: right;
   float: right;
   width: 60%;
-   }
-    #btn-cart {
-     margin-top:25px;
-margin-left:25px;
-margin-right:25px;
-margin-bottom:25px;
-    color: black;
-     font-size: 20px;
-    font-family: 'Courier New', Courier, monospace;
 }
-    #btn-bookings {
-     margin-top:25px;
-margin-left:25px;
-margin-right:25px;
-margin-bottom:25px;
-    color: black;
-    font-size: 20px;
-    font-family: 'Courier New', Courier, monospace;
+#btn-cart {
+  margin-top: 25px;
+  margin-left: 25px;
+  margin-right: 25px;
+  margin-bottom: 25px;
+  color: black;
+  font-size: 16px;
+  font-weight:100;
 }
-   
-#greating{
+#btn-bookings {
+  margin-top: 25px;
+  margin-left: 25px;
+  margin-right: 25px;
+  margin-bottom: 25px;
+  color: black;
+  font-size: 16px;
+  font-weight:100;
+}
+
+#greating {
   grid-row-start: 2;
   grid-row-end: 3;
   grid-column-start: 1;
   grid-column-end: 13;
 }
-#explore{
-  color:white;
-  display:flex;
-  text-align:center;
+#explore {
+  color: white;
   display: flex;
-flex-direction: column;
-}
-#compare{
-  color:white;
-  display:flex;
-  text-align:center;
-  display: flex;
-flex-direction: column;
-}
-#content-left {
-  grid-row-start: 4;
-  grid-row-end: 10;
-  grid-column-start: 3;
-  grid-column-end: 6;
-  border-radius: 8px;
-  background-color: #F1F5F9;
+  text-align: center;
   display: flex;
   flex-direction: column;
-   align-items: center;
 }
-#add-departure{
-margin-top:25px;
-margin-left:25px;
-margin-right:25px;
-margin-bottom:0px;
+#compare {
+  color: white;
+  display: flex;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
 }
-#add-arrival{
-margin-top:0px;
-margin-left:25px;
-margin-right:25px;
-margin-bottom:0px;
-}
-#add-nothing {
-    visibility:hidden;
-    height: 0;
-     width: 0;
-     overflow: hidden;
-}
-#today{
-margin-top:0px;
-margin-left:25px;
-margin-right:25px;
-margin-bottom:50px;
-}
-#btn-add {
-    width:200px; 
-    height: 50px;
-    margin-left:25px;
-margin-right:25px;
-margin-bottom:25px;
-    padding: 17px;
-    border: 1px green solid;
-    border-radius: 5px;
-    color: #ffffff;
-    background-color: #4FAA82;
-    font-size: 14px;
-    font-family: 'Courier New', Courier, monospace;
-  }
-#content-right {
+
+#content {
   grid-row-start: 4;
   grid-row-end: 10;
-  grid-column-start: 7;
-  grid-column-end: 10;
-  border-radius: 8px;
+  grid-column-start: 1;
+  grid-column-end: 13;
   width:100%;
-  background-color: #F1F5F9;
-  display : flex;
-    flex-direction: column;
+  display:flex;
+  justify-content: center;
+}
+
+#content-left {
+  width: 300px;
+  height:320px;
+  padding:5px;
+  margin-right:60px;
+  background-color: #fefefe;
+  display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+  border-radius: 8px;
+}
+
+#add-departure {
+  padding:5px;
+  background-color: #f1f3f3;
+  width:260px; 
+  height: 35px;
+  border:0px solid;
+  border-bottom:1px solid #d9dbdb;
+  border-radius:5px;
+}
+
+#add-arrival {
+  margin-bottom:25px;
+  padding:5px;
+  background-color: #f1f3f3;
+  width:260px; 
+  height: 35px;
+  border:0px solid;
+  border-radius:5px;
+}
+
+#add-nothing {
+  visibility: hidden;
+  height: 0;
+  width: 0;
+  overflow: hidden;
+}
+
+#today {
+  margin-bottom: 80px;
+  width:260px; 
+  height: 35px;
+  padding:5px;
+  font-family:Calibri;
+  background-color: #f1f3f3;
+  border-radius:5px;
+  border:0px solid;
+  color:#545756;
+}
+
+#btn-add {
+  width: 260px;
+  height: 40px;
+  border: 1px #86b5ab solid;
+  border-radius: 5px;
+  color: #ffffff;
+  background-color: #4ea890;
+  font-size: 14px;
+}
+
+#content-right {
+  width: 300px;
+  height:320px;
+  padding:15px;
+  margin-left:60px;
+  background-color: #fefefe;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content:center;
+  border-radius: 8px;
 }
 .train-icon {
   width: 100px;
   height: auto;
-display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-.line{
-  margin-top: 25px;
-  height: 2px;
-  width:200px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  background:#4FAA82;
-  /* linear-gradient(90deg, rgb(0, 0, 255), rgb(0,255, 150), rgb(0, 0, 255));*/  
-    }
-    .message{
-      text-align: center;
-      font-size: 14;
-      font-family: 'Courier New', Courier, monospace;
-      display: flex;
+}
+
+.line {
+  margin-top: 25px;
+  height: 2px;
+  width: 200px;
+  display: flex;
   flex-direction: column;
   align-items: center;
-    }
-    #trip {
-      display : flex;
-      flex-direction: row;
-       align-items: center;
-       justify-content: space-between;
- width:100%;
- background-color: 	gainsboro;
- border-radius: 8px;
-    }
-    #foundTrip {
-       margin-top:25px; 
-    margin-left:25px;
-margin-right:15px;
-margin-bottom:25px;
-font-size: 12;
-      font-family: 'Courier New', Courier, monospace;
-    }
-    #departureTime{
-       margin-top:25px; 
-    margin-left:15px;
-margin-right:15px;
-margin-bottom:25px;
-font-size: 12;
-      font-family: 'Courier New', Courier, monospace;
-    }
-    #ticketPrice{
-       margin-top:25px; 
-    margin-left:15px;
-margin-right:15px;
-margin-bottom:25px;
-font-size: 12;
-      font-family: 'Courier New', Courier, monospace;
-    }
-    #btn-book{
-      width:100px; 
-    height: 30px;
-    margin-top:25px; 
-    margin-left:15px;
-margin-right:15px;
-margin-bottom:25px;
-display : flex;
-      flex-direction: row;
-       align-items: center;
-    padding: 17px;
-    border: 1px green solid;
-    border-radius: 5px;
-    color: #ffffff;
-    background-color: #4FAA82;
-    font-size: 12px;
-    font-family: 'Courier New', Courier, monospace;
-    }
+  background: #4faa82;
+  /* linear-gradient(90deg, rgb(0, 0, 255), rgb(0,255, 150), rgb(0, 0, 255));*/
+}
+
+.message {
+  text-align: center;
+  font-size: 14;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.trip {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  background-color: #f6f1f0;
+  border-radius: 8px;
+  padding:5px;
+  font-size:14px;
+  margin: 10px 0px;
+}
+
+.btn-book {
+  width: 60px;
+  height: 30px;
+  border: 1px #8ccdbd solid;
+  border-radius: 5px;
+  color: #ffffff;
+  background-color: #4faa82;
+  font-size:12px;
+}
