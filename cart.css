@@ -1,13 +1,16 @@
 /* HEADER */
 
 /* BODY */
+
+* {
+  box-sizing: border-box;
+}
+
 body {
   /*à verifier le lien pour image et changer*/
-  background-color: whitesmoke;
-  background-repeat: no-repeat; 
-  background-size: cover; 
-  font-family: sans-serif;
-  padding: 20px;
+  background-color:#f1f3f3;
+  font-family: Calibri;
+  margin: 0px;
 }
 #container {
   height: 100vh;
@@ -22,122 +25,144 @@ body {
   grid-column-start: 1;
   grid-column-end: 13;
   background-color: white;
+  margin: Opx;
+  height: 60px;
+  display: flex;
+  align-items: center;
 }
 #logo-container {
-    /* à verifier si il faut ajouter d'utres lines*/
-    display:flex;
-flex-direction: row;
- justify-content: space-between;
- width:100%;
+  /* à verifier si il faut ajouter d'utres lines*/
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
 }
-  #logo-container-left {
-display: flex;
- flex-direction: row;
- justify-content: flex-end;
- justify-content: space-around;
+
+#logo-container-left {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
   aside: left;
   float: left;
   width: 30%;
-   }
-   #btn-home {
-     margin-top:25px;
-margin-left:25px;
-margin-right:25px;
-margin-bottom:25px;
-    color: #4FAA82;
-    font-family: roboto;
+}
+
+a {
+  text-decoration:none;
+  color:inherit;
+}
+
+#btn-home {
+  margin-top: 25px;
+  margin-left: 25px;
+  margin-right: 25px;
+  margin-bottom: 25px;
+  color: #4faa82;
 }
 #logo-container-right {
-    display: flex;
- flex-direction: row;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
   aside: right;
   float: right;
   width: 60%;
-   }
-    #btn-cart {
-     margin-top:25px;
-margin-left:25px;
-margin-right:25px;
-margin-bottom:25px;
-    color: black;
-    font-family: roboto;
-    font-size:25;
-}
-    #btn-bookings {
-     margin-top:25px;
-margin-left:25px;
-margin-right:25px;
-margin-bottom:25px;
-    color: black;
-    font-family: roboto;
-    font-size:25;
 }
 
-   #myBookings{
-      grid-row-start: 4;
-  grid-row-end: 9;
-  grid-column-start: 2;
-  grid-column-end: 12;
-  background-color:white;
-  border-radius: 5px;
-  width:100%;
-     display: flex;
-     flex-direction: column;
- justify-content: center;
- align-items: center;
-   }
-   #myBookingsLineOne{
-     display: flex;
- justify-content: center;
- align-items: center;
- margin-top:25px;
- margin-bottom:25px;
-   }
-      #myBookingsLineTwo{
-     display: flex;
- justify-content: center;
- align-items: center;
- margin-top:25px;
- margin-bottom:25px;
-   }
-   #purchaseTotal{
-     grid-row-start: 8;
-  grid-row-end: 9;
+#btn-cart {
+  margin-top: 25px;
+  margin-left: 25px;
+  margin-right: 25px;
+  margin-bottom: 25px;
+  color: black;
+  font-size: 16px;
+  font-weight: 100;
+}
+
+#btn-bookings {
+  margin-top: 25px;
+  margin-left: 25px;
+  margin-right: 25px;
+  margin-bottom: 25px;
+  color: black;
+  font-size: 16px;
+  font-weight: 100;
+}
+
+#content {
+  grid-row-start: 4;
+  grid-row-end: 10;
   grid-column-start: 1;
   grid-column-end: 13;
-     margin-top:25px;
-     width:100%;
-         /*width: 1138px;*/ 
-    height: 500px;
-    background-color: darkslateblue;
-    color:white;
-    border-radius: 8px;
-     display: flex;
-justify-content: space-between;
-align-items: center;
-  }
-    #myTotal{
- margin-top:25px;
- margin-bottom:25px;
- margin-left:25px;
-   }
+  height:100vh;
+  display:flex;
+  justify-content: center;
+  margin-top:50px;
+}
 
- #btn-purchase {
-    width:200px; 
-    height: 50px;
-    margin-top:25px;
-    margin-left:25px;
-margin-right:25px;
-margin-bottom:25px;
-    padding: 17px;
-    border: 1px green solid;
-    border-radius: 8px;
-    color: #ffffff;
-    background-color: #4FAA82;
-    font-size: 16px;
-    display: flex;
-    align-items: center;
-    flex-direction: row;
- }
+#myBookings {
+  background-color: white;
+  border-radius: 5px;
+  width: 70%;
+  max-height:100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position:relative;
+}
 
-  
+#myBookingsLineOne {
+  margin-bottom:25px;
+  margin-top:25px;
+}
+
+
+#purchaseTotal {
+  width: 100%;
+  background-color: #001546;
+  color: white;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position:absolute;
+  bottom:0;
+}
+
+#myTotal {
+  margin-top: 25px;
+  margin-bottom: 25px;
+  margin-left: 25px;
+}
+
+#btn-purchase {
+  width: 100px;
+  height: 40px;
+  margin-right:70px;
+  border: 1px green solid;
+  border-radius: 8px;
+  color: #ffffff;
+  background-color: #4faa82;
+}
+
+.btn-delete {
+  width: 30px;
+  height: 30px;
+  border: 1px green solid;
+  border-radius: 8px;
+  color: #ffffff;
+  background-color: #4faa82;
+}
+
+.trip {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 80%;
+  background-color: #f6f1f0;
+  border-radius: 8px;
+  padding:5px;
+  font-size:14px;
+  margin-bottom:20px;
+}
